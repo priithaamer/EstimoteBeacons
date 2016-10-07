@@ -12,6 +12,11 @@
 		38A96AF119962CA300A13C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A96AEF19962CA300A13C6A /* Main.storyboard */; };
 		38A96AF319962CA300A13C6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A96AF219962CA300A13C6A /* Images.xcassets */; };
 		38A96AFF19962CA300A13C6A /* EstimoteBeaconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96AFE19962CA300A13C6A /* EstimoteBeaconsTests.swift */; };
+		38A96B0919962CC800A13C6A /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A96B0819962CC800A13C6A /* libEstimoteSDK.a */; };
+		38A96B0C19962E4C00A13C6A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A96B0B19962E4C00A13C6A /* SystemConfiguration.framework */; };
+		38A96B0E19962E5300A13C6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A96B0D19962E5300A13C6A /* Foundation.framework */; };
+		38A96B1019962E5B00A13C6A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A96B0F19962E5B00A13C6A /* CoreBluetooth.framework */; };
+		38A96B1219962E6200A13C6A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A96B1119962E6200A13C6A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,12 @@
 		38A96AF819962CA300A13C6A /* EstimoteBeaconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstimoteBeaconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A96AFD19962CA300A13C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A96AFE19962CA300A13C6A /* EstimoteBeaconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimoteBeaconsTests.swift; sourceTree = "<group>"; };
+		38A96B0819962CC800A13C6A /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteBeacons/EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		38A96B0A19962D4B00A13C6A /* Estimote-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Estimote-Bridging-Header.h"; sourceTree = "<group>"; };
+		38A96B0B19962E4C00A13C6A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		38A96B0D19962E5300A13C6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38A96B0F19962E5B00A13C6A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		38A96B1119962E6200A13C6A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +52,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A96B0919962CC800A13C6A /* libEstimoteSDK.a in Frameworks */,
+				38A96B0C19962E4C00A13C6A /* SystemConfiguration.framework in Frameworks */,
+				38A96B0E19962E5300A13C6A /* Foundation.framework in Frameworks */,
+				38A96B1019962E5B00A13C6A /* CoreBluetooth.framework in Frameworks */,
+				38A96B1219962E6200A13C6A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +73,11 @@
 		38A96ADD19962CA300A13C6A = {
 			isa = PBXGroup;
 			children = (
+				38A96B1119962E6200A13C6A /* CoreLocation.framework */,
+				38A96B0F19962E5B00A13C6A /* CoreBluetooth.framework */,
+				38A96B0D19962E5300A13C6A /* Foundation.framework */,
+				38A96B0B19962E4C00A13C6A /* SystemConfiguration.framework */,
+				38A96B0819962CC800A13C6A /* libEstimoteSDK.a */,
 				38A96AE819962CA300A13C6A /* EstimoteBeacons */,
 				38A96AFB19962CA300A13C6A /* EstimoteBeaconsTests */,
 				38A96AE719962CA300A13C6A /* Products */,
@@ -80,6 +101,7 @@
 				38A96AEF19962CA300A13C6A /* Main.storyboard */,
 				38A96AF219962CA300A13C6A /* Images.xcassets */,
 				38A96AE919962CA300A13C6A /* Supporting Files */,
+				38A96B0A19962D4B00A13C6A /* Estimote-Bridging-Header.h */,
 			);
 			path = EstimoteBeacons;
 			sourceTree = "<group>";
@@ -325,9 +347,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = EstimoteBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/EstimoteBeacons/Estimote-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -336,9 +368,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = EstimoteBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/EstimoteBeacons/Estimote-Bridging-Header.h";
 			};
 			name = Release;
 		};
